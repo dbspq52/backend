@@ -47,8 +47,8 @@ public class InactiveStationService {
                     log.warn("Station [{}] not found in DB", stationId);
                 }
 
-                mapService.removeMapping(sessionId);
                 heartbeatMonitorService.removeHeartbeat(stationId);
+                mapService.removeMapping(sessionId);
             }
         }
     }

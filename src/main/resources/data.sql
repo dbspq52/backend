@@ -33,9 +33,3 @@ INSERT INTO customer (customer_id, customer_name, id_token, email, phone, vehicl
 INSERT INTO customer (customer_id, customer_name, id_token, email, phone, vehicle_no, registration_date) VALUES ("user4", "이름4", "user-004", "e4@gmail.com", "01012345673", "12-2222", "2024-05-23T16:30:00");
 INSERT INTO customer (customer_id, customer_name, id_token, email, phone, vehicle_no, registration_date) VALUES ("user5", "이름5", "user-005", "e5@gmail.com", "01012334455", "12-6666", "2024-05-24T16:30:00");
 INSERT INTO customer (customer_id, customer_name, id_token, email, phone, vehicle_no, registration_date) VALUES ("user6", "이름6", "user-006", "e6@gmail.com", "01010044499", "12-8989", "2024-05-25T16:30:00");
-INSERT INTO charger_info (evse_id, charger_status, update_status_time_stamp, station_id)
-VALUES (1, 'Available', '2025-04-20T12:30:00', 'station-001');
-INSERT INTO charger_info (evse_id, charger_status, update_status_time_stamp, station_id)
-VALUES (2, 'Available', '2025-04-20T12:30:00', 'station-001');
-INSERT INTO charger_info (evse_id, charger_status, update_status_time_stamp, station_id)
-VALUES (3, 'Available', '2025-04-20T12:30:00', 'station-001');
