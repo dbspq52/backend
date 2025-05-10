@@ -47,13 +47,13 @@ public interface SpringDataJpaChargingStationRepository extends JpaRepository<Ch
     )
     FROM ChargingStationEntity cs
     JOIN ChargerEntity c ON cs.stationId = c.station.stationId
-    WHERE cs.model = :stationName
+    WHERE cs.stationName = :stationName
     GROUP BY cs.stationId
 """)
     Optional<StationFullInfoQuery> getFullStationInfo(@Param("stationName") String stationName);
 
     @Modifying
-    @Query("delete from ChargingStationEntity cs where cs.model = :stationName")
+    @Query("delete from ChargingStationEntity cs where cs.stationName = :stationName")
     int deleteByName(@Param("stationName")String stationName);
 
 

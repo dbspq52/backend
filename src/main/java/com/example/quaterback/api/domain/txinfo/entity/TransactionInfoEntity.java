@@ -28,7 +28,7 @@ public class TransactionInfoEntity {
     private String stationId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "eves_id")
+    @JoinColumn(name = "evse_id")
     private ChargerEntity evseId;
 
     private Integer totalMeterValue;

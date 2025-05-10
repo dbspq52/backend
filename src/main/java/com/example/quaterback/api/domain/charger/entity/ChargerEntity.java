@@ -34,8 +34,8 @@ public class ChargerEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "station_id", referencedColumnName = "stationId")
     private ChargingStationEntity station;
-    @OneToMany(mappedBy ="evseId", cascade = CascadeType.ALL)
-    private List<TransactionInfoEntity> txInfoList = new ArrayList<>();
+    //@OneToMany(mappedBy ="evseId", cascade = CascadeType.ALL)
+    //private List<TransactionInfoEntity> txInfoList = new ArrayList<>();
 
 
 /***연관 관계 메서드 작성 필요!!!!***/
