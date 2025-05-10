@@ -14,6 +14,7 @@ import com.example.quaterback.api.feature.managing.dto.apiRequest.CreateTransact
 import com.example.quaterback.api.feature.managing.dto.txInfo.TransactionInfoDto;
 import com.example.quaterback.api.feature.managing.dto.txInfo.TransactionSummaryDto;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -94,7 +95,7 @@ public class TransactionInfoService {
         return new TransactionInfoDto(fullTxDomain);
     }
 
-
+    @Transactional
     public void saveTxInfo(CreateTransactionInfoRequest request){
         TransactionInfoDomain txInfoDomain = request.toDomain();
         jpaTxInfoRepository.save(txInfoDomain);
